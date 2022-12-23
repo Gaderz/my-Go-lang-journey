@@ -453,5 +453,16 @@ func main() {
 	default:
 		fmt.Println(i, "is greater than 20")
 	}
-
+	//  TYPE SWITCH
+	var l interface{} = 1
+	switch l.(type) {
+	case int:
+		fmt.Println("l is an interger")
+	case float64:
+		fmt.Println("l is float64")
+	case string:
+		fmt.Println("l is also a string")
+	default:
+		fmt.Println("type switch can take any data type cincluding arrays")
+	}
 }
